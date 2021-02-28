@@ -1,0 +1,25 @@
+.compra__contenedor {
+  position: relative;
+}
+
+.compra__contenedor .form__group-compra {
+  width: 240px;
+  height: 200px;
+  background: yellow;
+  position: absolute;
+  top: 70px;
+  padding: 10px;
+}
+
+.compra__contenedor .form__group-datos {
+  margin-top: 2px;
+}
+
+.compra__contenedor .form__label {
+  color: #222;
+  font-size: 18px;
+}
+
+.compra__contenedor .buton_group-compra {
+  margin-top: 10px;
+}

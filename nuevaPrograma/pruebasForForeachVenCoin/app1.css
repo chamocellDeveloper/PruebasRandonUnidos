@@ -51,3 +51,15 @@
   text-align: center;
   line-height: 50px;
 }
+
+.contenedor__grupo1-caja2 h2 {
+  color: #fff;
+}
+
+.form__group-title {
+  color: #fff;
+  margin-left: 40px;
+  position: absolute;
+  margin-top: 20px;
+  font-size: 18px;
+}

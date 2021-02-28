@@ -102,16 +102,18 @@ const res3 = res1 -res2      // cuanto te llego pesos
 
 
 // operacion cuando compras BTC con pesos 
-const number4 = 123.26
-const number5 = 1060718.69
+const number4 = 1557.94     //compra de cripto precio en fias
+const number5 = 950000.01   //precio del mercado al comprar
 const number6 = 0.0065
 
 const res4 = number4 / number5 // monto comprado/posentage
 const res5 = res4 * number6  //comicsion
 const res6 = res4 - res5     // cuanto te dan
+//fin de esta operacion pero se puede unir con la sigiente directamente al poner el monto 
+
 
 // operacion de ganacia 
-const number7 = 1060718.69
+const number7 = 951853.00 // este monto en pesos es al que quieres vender 
 const number8 = res6
 const number9 = res4  //monto que yo deveria tener
 

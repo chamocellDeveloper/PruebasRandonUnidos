@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="app1.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reloj.css">
+    <link rel="stylesheet" href="compras.css">
     <script src="https://kit.fontawesome.com/3226d1ef96.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,6 +18,14 @@
     <main>
         <header>
             <div class="container">
+                <div class="reloj">
+                    <h2 id="hour">00</h2>
+                    <h2 id="dot">:</h2>
+                    <h2 id="minute">00</h2>
+                    <h2 id="dot">:</h2>
+                    <h2 id="seconds">00</h2>
+                    <span id="ampm">AM</span>
+                </div>
                 <h1 class="pueba__groud-title">Encabezado</h1>
             </div>
         </header>
@@ -78,11 +88,41 @@
                         <div class="contenedor__grupo1-caja3-1">
                             <img src="img/img1.jpg" alt="" class="imagen">
                         </div>
-                        <form action="" class="form__group-form">
                             <label for="" class="form__group-title" id="form__group-title">
                                 Compra de Cripto
                             </label>
-                        </form>
+                            <div class="compra__contenedor">
+                                <form action="" class="form__group-compra" id="form__group-compra">
+                                    <div class="form__group-datos" id="form__group-datos">
+                                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                                        <label for="compras" class="form__label">Cantidad en fiat</label>
+                                        <div class="form_group-imput">
+                                            <input type="text" class="form__input" name="presioC" id="presioC" >
+                                            <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
+                                        </div>
+                                    </div>
+                                    <div class="form__group-datos" id="form__group-datos2">
+                                        <label for="compras" class="form__label">Precio del mercado</label>
+                                        <div class="form_group-imput">
+                                            <input type="text" class="form__input2" name="valorC" id="valorC" >
+                                            <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__group-datos" id="form__group-datos3">
+                                        <label for="compras" class="form__label">Quiero vender a :</label>
+                                        <div class="form_group-imput">
+                                            <input type="text" class="form__input3" name="valorC" id="deceo" >
+                                            <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
+                                        </div>
+                                    </div>
+                                    <div class="formulario__mensaje" id="formulario__mensaje">
+                                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Rellena el formulario. </p>
+                                    </div>
+                                    <button type="submit" class="buton_group-compra" >Enviar</button>
+                            </form>
+
+                            </div>
                     </div>
                 </div>
             </div>
@@ -102,5 +142,7 @@
     </main>
     
     <script src="app.js"></script>
+    <script src="reloj.js"></script>
+    <script src="compra.js"></script>
 </body>
 </html>
