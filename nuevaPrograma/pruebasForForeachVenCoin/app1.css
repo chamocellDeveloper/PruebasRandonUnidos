@@ -1,14 +1,14 @@
 .contenedor__grupo1 {
   width: 100%;
   height: 500px;
-  background: red;
+  /*background: red;*/
 }
 
 .contenedor__grupo1-caja1 {
   width: 246px;
-  height: 350px;
+  height: 450px;
   position: absolute;
-  background: blue;
+  /*background: blue;*/
   margin-top: 20px;
   margin-left: 10px;
 }
@@ -16,7 +16,7 @@
 .contenedor__grupo1-caja2 {
   width: 240px;
   height: 50px;
-  background: purple;
+  /*background: purple;*/
   margin: 10px 0 0 4px;
   text-align: center;
 }
@@ -24,7 +24,7 @@
 .contenedor__grupo1-caja3 {
   width: 240px;
   height: 250px;
-  background: peru;
+  /*background: peru;*/
   margin: 10px 0 0 4px;
   position: relative;
 }
@@ -53,11 +53,11 @@
 }
 
 .contenedor__grupo1-caja2 h2 {
-  color: #fff;
+  color: #000;
 }
 
 .form__group-title {
-  color: #fff;
+  color: #000;
   margin-left: 40px;
   position: absolute;
   margin-top: 20px;

@@ -26,6 +26,7 @@ const clock = () => {
     minute.innerHTML = m
     seconds.innerHTML = s
     ampm.innerHTML = am
+
 }
 
 const interval = setInterval(clock,1000)

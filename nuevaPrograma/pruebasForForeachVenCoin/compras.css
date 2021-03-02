@@ -4,11 +4,12 @@
 
 .compra__contenedor .form__group-compra {
   width: 240px;
-  height: 200px;
-  background: yellow;
+  height: 280px;
+  /*background: yellow;*/
   position: absolute;
   top: 70px;
   padding: 10px;
+  margin-left: 40px;
 }
 
 .compra__contenedor .form__group-datos {
@@ -22,4 +23,44 @@
 
 .compra__contenedor .buton_group-compra {
   margin-top: 10px;
+}
+
+.hidden {
+  display: block;
+}
+
+.form__group-compra-activo .formulario__label {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formulario__mensajeCompra-exito {
+  font-size: 14px;
+  color: #119200;
+  display: none;
+}
+
+.formulario__mensajeCompra-exito-activo {
+  display: block;
+}
+
+.formulario__mensajeCompra {
+  width: 185px;
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+  margin-top: 5px;
+  margin-left: -12px;
+  font-size: 10px;
+}
+
+.formulario__mensajeCompra-activo {
+  display: block;
+}
+
+.formulario__mensaje p {
+  margin: 0;
 }

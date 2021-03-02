@@ -92,31 +92,34 @@
                                 Compra de Cripto
                             </label>
                             <div class="compra__contenedor">
-                                <form action="" class="form__group-compra" id="form__group-compra">
-                                    <div class="form__group-datos" id="form__group-datos">
-                                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-                                        <label for="compras" class="form__label">Cantidad en fiat</label>
+                                <form action="" class="form__group-compra" id="formCompra">
+
+                                    <div class="form__group-datos" id="group__presioC">
+                                        <p class="formulario__mensajeCompra-exito" id="formulario__mensajeCompra-exito">Formulario enviado exitosamente!</p>
+                                        <label for="compras" class="formulario__label">Cantidad en fiat</label>
                                         <div class="form_group-imput">
-                                            <input type="text" class="form__input" name="presioC" id="presioC" >
-                                            <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
+                                            <input type="text" class="formulario__input" name="presioC" id="presioC" >
+                                            <p class="compra__group-error">Ingrese un valor Basico</p>
                                         </div>
                                     </div>
-                                    <div class="form__group-datos" id="form__group-datos2">
-                                        <label for="compras" class="form__label">Precio del mercado</label>
+                                    <div class="form__group-datos" id="group__valorC">
+                                        <label for="compras" class="formulario__label">Precio del mercado</label>
                                         <div class="form_group-imput">
-                                            <input type="text" class="form__input2" name="valorC" id="valorC" >
-                                            <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
+                                            <input type="text" class="formulario__input" name="valorC" id="valorC" >
+                                            <p class="compra__group-error">Ingrese un valor Basico</p>
                                         </div>
                                     </div>
 
-                                    <div class="form__group-datos" id="form__group-datos3">
-                                        <label for="compras" class="form__label">Quiero vender a :</label>
+                                    <div class="form__group-datos" id="group__deceo">
+                                        <label for="compras" class="formulario__label">Quiero vender a :</label>
                                         <div class="form_group-imput">
-                                            <input type="text" class="form__input3" name="valorC" id="deceo" >
-                                            <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
+                                            <input type="text" class="formulario__input" name="deceo" id="deceo" >
+                                            <p class="compra__group-error">Ingrese un valor Basico</p>
                                         </div>
                                     </div>
-                                    <div class="formulario__mensaje" id="formulario__mensaje">
+            
+
+                                    <div class="formulario__mensajeCompra" id="formulario__mensajeCompra">
                                         <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Rellena el formulario. </p>
                                     </div>
                                     <button type="submit" class="buton_group-compra" >Enviar</button>
