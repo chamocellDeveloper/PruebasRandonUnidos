@@ -1,5 +1,6 @@
 const formCompra = document.getElementById('formCompra')
 const inputsC = document.querySelectorAll('#formCompra input')
+const compras1 = document.getElementById('compra2')
 
 const expresiones2 = {
     presioC: /\d+\.\d{2}$/,
@@ -99,6 +100,23 @@ const ConpraValida = () => {
 
     console.log(res6)
     //fin de esta operacion pero se puede unir con la sigiente directamente al poner el monto 
+
+    const DatosCompra1 = [
+     {precioCompra: number4},
+     {mercado     : number5},
+     {cominion    :'0.050%'},
+     {compraste   : res4   },
+     {cobroComi   : res5   },
+     {total       : res6   }
+    ]
+    
+    console.log(DatosCompra1)
+
+    /*DatosCompra1.forEach(item => {
+      const li = document.createElement('li')
+      li.textContent = `${item.precioCompra}`
+      compra2.appendChild(li)
+    })*/
 
 }
 

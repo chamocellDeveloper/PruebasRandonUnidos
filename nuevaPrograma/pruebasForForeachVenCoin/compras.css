@@ -64,3 +64,45 @@
 .formulario__mensaje p {
   margin: 0;
 }
+
+/* Contenedor 3 Respuestas */
+
+contenido3 {
+  width: 100%;
+  height: 500px;
+  background: rgb(201, 201, 202);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  width: 90%;
+  height: 95%;
+  background: darkblue;
+}
+
+.title {
+  width: 244px;
+  height: 50px;
+  background: chartreuse;
+  text-align: center;
+}
+.title > h3 {
+  padding-top: 12px;
+}
+
+section .contenido {
+  margin-top: 12px;
+  height: 400px;
+  background: darkgreen;
+}
+
+.contenido ul {
+  margin-left: 15px;
+  padding: 10px;
+}
+
+.contenido ul li {
+  margin-top: 10px;
+  list-style: none;
+}
