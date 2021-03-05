@@ -23,7 +23,7 @@ contenido {
 }
 
 .container:hover {
-  background: rgb(4, 0, 255);
+  background: rgba(81, 78, 243, 0.6);
   color: #fff;
   box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.4);
   transition: all 1s ease-in;
@@ -39,12 +39,13 @@ contenido {
   display: inline-flexbox;
   align-items: center;
   justify-content: center;
+  height: 300px;
 }
 
 .form-venta:hover {
   width: 100%;
   height: 50vh;
-  background: rgb(4, 0, 255);
+  background: rgba(81, 78, 243, 0.6);
   color: #fff;
   border-radius: 5px;
   box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.4);
@@ -85,45 +86,7 @@ contenido {
 }
 
 .form-venta .buton_group-enviar {
-  position: relative;
-  display: block;
-  height: 55px;
-  width: 150px;
-  margin: 40px 80px;
-  /*color: #fff;*/
-  font-size: 20px;
-  font-weight: 500px;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 0px 5px 5px 0px;
-  transition: all 0s ease-out;
-}
-
-.buton_group-enviar:active {
-  top: 3px;
-  box-shadow: 0px 2px 0px 0px #2e4476;
-}
-
-.buton_group-enviar,
-.buton_group-enviar span {
-  background: #3b5999;
-  border-left: 1px solid #2e4476;
-  box-shadow: 0px 2px 0px 0px #2e4476;
-}
-
-.buton_group-enviar span {
-  position: absolute;
-  height: 55px;
-  width: 60px;
-  top: 0;
-  left: -61px;
-  line-height: 55px;
-  font-size: 25px;
-  display: block;
-  font-weight: normal;
-  border-radius: 5px 0 0 5px;
+  margin-left: 28px;
 }
 
 .formulario__validacion-estado {
@@ -161,6 +124,40 @@ contenido {
 .formulario__mensaje p {
   margin: 0;
 }
+
+/* esta solo es para el boton de venta hay una modificacion */
+
+.formulario__mensajeVenta-exito {
+  font-size: 14px;
+  color: #119200;
+  display: none;
+}
+
+.formulario__mensajeVenta-exito-activo {
+  display: block;
+}
+
+.formulario__mensajeVenta {
+  width: 185px;
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.formulario__mensajeVenta-activo {
+  display: block;
+}
+
+.formulario__mensajeVenta p {
+  margin: 0;
+}
+
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .formulario__validacion-estado {
   color: #1ed12d;
@@ -182,7 +179,7 @@ contenido {
 
 contenido1:hover {
   padding: 10px;
-  background: rgb(4, 0, 255);
+  background: rgba(81, 78, 243, 0.6);
   color: #fff;
   border-radius: 5px;
   box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.4);

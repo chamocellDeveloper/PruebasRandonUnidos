@@ -56,16 +56,16 @@ formVenta.addEventListener('submit', (e) => {
         formVenta.reset()
         datosValidados()
 
-        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo')
+        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensajeVenta-exito-activo')
 
         setTimeout(() => {
-            document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo')
+            document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensajeVenta-exito-activo')
         },5000)
     }else {
-        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo')
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensajeVenta-activo')
 
         setTimeout(() => {
-            document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo')
+            document.getElementById('formulario__mensaje').classList.remove('formulario__mensajeVenta-activo')
         },5000)
     }
 })

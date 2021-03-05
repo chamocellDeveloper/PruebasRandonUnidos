@@ -65,10 +65,11 @@ inputsC.forEach((input) => {
 
 formCompra.addEventListener('submit', (e) => {
     e.preventDefault()
+    console.log('click')
     
     if(campoC.presioC && campoC.valorC ){
         formCompra.reset()
-        ConpraValida()
+        CompraValida()
         document.getElementById('formulario__mensajeCompra-exito').classList.add('formulario__mensajeCompra-exito-activo')
 
         setTimeout(() => {
@@ -84,7 +85,7 @@ formCompra.addEventListener('submit', (e) => {
 })
 
 
-const ConpraValida = () => {
+const CompraValida = () => {
 
     // operacion cuando compras BTC con pesos 
     const number4 = compra.presioC     //compra de cripto precio en fias
@@ -94,6 +95,7 @@ const ConpraValida = () => {
     const res4 = number4 / number5 // monto comprado/posentage
     const res5 = res4 * number6  //comicsion
     const res6 = res4 - res5     // cuanto te dan
+    const res7 = res5 * number5
 
     valorRest ["res4"] = res4
     valorRest ["number4"] = number4
@@ -107,7 +109,8 @@ const ConpraValida = () => {
      {cominion    :'0.050%'},
      {compraste   : res4   },
      {cobroComi   : res5   },
-     {total       : res6   }
+     {total       : res6   },
+     {comicionP   : res7   },
     ]
     
     console.log(DatosCompra1)
@@ -117,6 +120,15 @@ const ConpraValida = () => {
       li.textContent = `${item.precioCompra}`
       compra2.appendChild(li)
     })*/
+
+    document.getElementById('descri7').innerHTML = `Cantidad Comprada ${DatosCompra1[0].precioCompra}</span>`
+    document.getElementById('descri8').innerHTML = `Valor de Mercado: <span>${DatosCompra1[1].mercado}</span>`
+    document.getElementById('descri9').innerHTML = `Comicion del <span>0.65%</span>` 
+    document.getElementById('descri10').innerHTML = `Total de la Comprado: <span>${DatosCompra1[3].compraste.toFixed(8)}</span>`
+    document.getElementById('descri11').innerHTML = `Total de la comicion: <span>${DatosCompra1[4].cobroComi.toFixed(8)}</span>`
+    document.getElementById('descri12').innerHTML = `Total de la comicion: <span>${DatosCompra1[6].comicionP.toFixed(2)}</span>`  
+    document.getElementById('descri13').innerHTML = `Total a recibir <span>${DatosCompra1[5].total.toFixed(8)}</span>`
+    
 
 }
 

@@ -1,0 +1,418 @@
+/*       configuraciones vercion a
+
+    <div class="content__a1">
+      <button type="submit" class="boton__doble-a3">
+        <span><i class="fas fa-share"></i></span>
+        Enviar</button>
+    </div>
+
+    configuraciones vercion m
+   <div class="boton__doble-m3">
+        <a href="#">
+            <span>Read More</span>
+            <span>Read More</span>
+        </a>
+    </div> 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.boton__doble-m1 {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+}
+
+.boton__doble-m1 a {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin: 15px 10px;
+  background: #222;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.boton__doble-m1 a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #1100fe;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+.boton__doble-m1 a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #1100fe;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.boton__doble-m1 a:nth-child(2)::before,
+.boton__doble-m1 a:nth-child(2)::after {
+  background: #8d3ef3;
+}
+
+.boton__doble-m1 a:hover::before,
+.boton__doble-m1 a:hover::after {
+  width: 50%;
+  transition-delay: 0s;
+  background: #fff;
+}
+
+.boton__doble-m1 a span {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.boton__doble-m1 a span:nth-child(1) {
+  transition-delay: 0.75s;
+}
+.boton__doble-m1 a:hover span:nth-child(1) {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+.boton__doble-m1 a span:nth-child(2) {
+  transform: scale(3);
+  opacity: 0;
+  color: #111;
+  transition-delay: 0s;
+}
+.boton__doble-m1 a:hover span:nth-child(2) {
+  transform: scale(1);
+  transition-delay: 0s;
+  color: rgb(8, 253, 29);
+  opacity: 1;
+  z-index: 10;
+  transition-delay: 0.5s;
+}
+/*  .boton__doble-m2 */
+
+.boton__doble-m2 {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+}
+
+.boton__doble-m2 a {
+  position: relative;
+  width: 130px;
+  height: 30px;
+  margin: 15px 10px;
+  background: #222;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.boton__doble-m2 a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #1100fe;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+.boton__doble-m2 a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #1100fe;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.boton__doble-m2 a:nth-child(2)::before,
+.boton__doble-m2 a:nth-child(2)::after {
+  background: #8d3ef3;
+}
+
+.boton__doble-m2 a:hover::before,
+.boton__doble-m2 a:hover::after {
+  width: 50%;
+  transition-delay: 0s;
+  background: #fff;
+}
+
+.boton__doble-m2 a span {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.boton__doble-m2 a span:nth-child(1) {
+  transition-delay: 0.75s;
+}
+.boton__doble-m2 a:hover span:nth-child(1) {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+.boton__doble-m2 a span:nth-child(2) {
+  transform: scale(3);
+  opacity: 0;
+  color: #111;
+  transition-delay: 0s;
+}
+.boton__doble-m2 a:hover span:nth-child(2) {
+  transform: scale(1);
+  transition-delay: 0s;
+  color: rgb(8, 253, 29);
+  opacity: 1;
+  z-index: 10;
+  transition-delay: 0.5s;
+}
+
+/*  .boton__doble-m3 */
+
+.boton__doble-m3 {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+}
+
+.boton__doble-m3 a {
+  position: relative;
+  width: 100px;
+  height: 25px;
+  margin: 15px 10px;
+  background: #222;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.boton__doble-m3 a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #1100fe;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+.boton__doble-m3 a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #1100fe;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.boton__doble-m3 a:nth-child(2)::before,
+.boton__doble-m3 a:nth-child(2)::after {
+  background: #8d3ef3;
+}
+
+.boton__doble-m3 a:hover::before,
+.boton__doble-m3 a:hover::after {
+  width: 50%;
+  transition-delay: 0s;
+  background: #fff;
+}
+
+.boton__doble-m3 a span {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+.boton__doble-m3 a span:nth-child(1) {
+  transition-delay: 0.75s;
+}
+.boton__doble-m3 a:hover span:nth-child(1) {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+.boton__doble-m3 a span:nth-child(2) {
+  transform: scale(3);
+  opacity: 0;
+  color: #111;
+  transition-delay: 0s;
+}
+.boton__doble-m3 a:hover span:nth-child(2) {
+  transform: scale(1);
+  transition-delay: 0s;
+  color: rgb(8, 253, 29);
+  opacity: 1;
+  z-index: 10;
+  transition-delay: 0.5s;
+}
+
+/* Boton a a1 con fontawesome */
+.content__a1 {
+  display: inline-block;
+}
+.boton__doble-a1 {
+  position: relative;
+  display: block;
+  height: 55px;
+  width: 100px;
+  margin: 40px 70px;
+  /*color: #fff;*/
+  font-size: 18px;
+  font-weight: 500px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: all 0s ease-out;
+}
+
+.boton__doble-a1:active {
+  top: 3px;
+  box-shadow: 0px 2px 0px 0px #2e4476;
+}
+
+.boton__doble-a1,
+.boton__doble-a1 span {
+  background: #3b5999;
+  border-left: 1px solid #2e4476;
+  box-shadow: 0px 2px 0px 0px #2e4476;
+}
+
+.boton__doble-a1 span {
+  position: absolute;
+  height: 55px;
+  width: 60px;
+  top: 0;
+  left: -64px;
+  line-height: 55px;
+  font-size: 25px;
+  display: block;
+  font-weight: normal;
+  border-radius: 5px 0 0 5px;
+}
+
+/* Boton a a2 con fontawesome */
+
+.boton__doble-a2 {
+  position: relative;
+  display: block;
+  height: 40px;
+  width: 80px;
+  margin: 40px 58px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: all 0s ease-out;
+}
+
+.boton__doble-a2:active {
+  top: 3px;
+  box-shadow: 0px 2px 0px 0px #2e4476;
+}
+
+.boton__doble-a2,
+.boton__doble-a2 span {
+  background: #3b5999;
+  border-left: 1px solid #2e4476;
+  box-shadow: 0px 2px 0px 0px #2e4476;
+}
+
+.boton__doble-a2 span {
+  position: absolute;
+  height: 41px;
+  width: 45px;
+  top: 0;
+  left: -50px;
+  line-height: 55px;
+  font-size: 25px;
+  display: block;
+  font-weight: normal;
+  border-radius: 5px 0 0 5px;
+}
+
+.boton__doble-a2 span i {
+  display: block;
+  margin-top: 8px;
+}
+
+/* Boton a a3 con fontawesome */
+
+.boton__doble-a3 {
+  position: relative;
+  display: block;
+  height: 24px;
+  width: 70px;
+  margin: 40px 45px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: all 0s ease-out;
+}
+
+.boton__doble-a3:active {
+  top: 3px;
+  box-shadow: 0px 2px 0px 0px #2e4476;
+}
+
+.boton__doble-a3,
+.boton__doble-a3 span {
+  background: #3b5999;
+  border-left: 1px solid #2e4476;
+  box-shadow: 0px 2px 0px 0px #2e4476;
+}
+
+.boton__doble-a3 span {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  top: 0;
+  left: -40px;
+  line-height: 55px;
+  font-size: 25px;
+  display: block;
+  font-weight: normal;
+  border-radius: 5px 0 0 5px;
+}
+
+.boton__doble-a3 span i {
+  display: block;
+  margin-top: 8px;
+  font-size: 8px;
+}
