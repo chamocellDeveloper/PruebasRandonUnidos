@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype - Herencia</title>
+</head>
+<body>
+    
+
+    <script>
+        function Animal (pelo, ojos) {
+            this.pelo = pelo
+            this.ojos = ojos
+        }
+
+        Animal.prototype.correr = function () {
+                console.log('corriendo...')
+            }
+        function Perro(apodo, pelo, ojos) {
+            Animal.call(this,pelo, ojos)
+            this.apodo = apodo
+        } 
+
+        Perro.prototype = Object.create(Animal.prototype)
+        Perro.prototype.construtor = Perro;
+
+        Perro.prototype.ladrar = function () {
+                console.log('guau guau')
+            }
+
+        const animal = new Animal('marron', 'marron')
+
+        const perrito = new Perro('perrito','marron', 'azul') 
+        
+    </script>
+</body>
+</html>
