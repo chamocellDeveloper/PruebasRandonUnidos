@@ -23,11 +23,12 @@ article {
 @media screen and (max-width: 768px) {
   main {
     grid-template:
-      [inicio] 'header header header header' 1fr
+      [inicio] 'header header' 1fr
       [contenido-statar] 'contenido contenido' 1fr
-      'contenido1 contenido1 contenido1' 1fr
-      'contenido2 contenido2 contenido2 ' 1fr
-      'contenido3 contenido3 contenido3 ' 1fr [fin]
+      'contenido contenido' 1fr
+      'contenido1 contenido1' 1fr
+      'contenido2 contenido2' 1fr
+      'contenido3 contenido3 ' 1fr [fin]
       /
       [inicio] 1fr [contenido-start] 1fr [fin];
   }

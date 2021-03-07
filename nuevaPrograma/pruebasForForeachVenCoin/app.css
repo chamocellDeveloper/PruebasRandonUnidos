@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 
+main {
+  width: 1000px;
+  max-width: 1000px;
+}
+
 contenido {
-  width: 300px;
+  width: 172px;
   height: 500px;
 }
 
