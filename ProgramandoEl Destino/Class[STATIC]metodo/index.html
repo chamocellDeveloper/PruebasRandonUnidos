@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class [STATIC] Metodos y Propiedades Estáticos</title>
+</head>
+<body>
+    
+
+
+    <script>
+        class Calculadora {
+            static propiedadEstatica =  'valor estatico'
+            propiedadNoEstatica = 'valor'
+
+            constructor() {
+                    this.propiedadNoEstatica = 'Nuvo valor'
+                }
+
+
+            static sumar(a, b) {
+                return a + b
+            }
+
+            restar (a, b) {
+                
+                return a - b
+            }
+
+            static multipicacion (a, b) {
+                return a* b
+            } 
+
+            divicion(a, b) {
+                return a / b
+            }
+        }
+
+        const c = new Calculadora()
+
+        
+        //console.log(c.restar(100, 50))
+        
+        console.log(Calculadora.sumar(10,20))
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singleton</title>
+</head>
+<body>
+
+    <script>
+        class Unica {
+            constructor(nombre) {
+                this.nombre = nombre
+
+                if(Unica.instancia){
+                    console.log('Creado')
+                    return Unica.instancia   
+                }
+
+                this.nombre = nombre
+
+                Unica.instancia  = this
+            }
+        }
+
+        const a = new Unica(10.78458)
+        const b = new Unica(999.525)
+    </script>
+    
+</body>
+</html>

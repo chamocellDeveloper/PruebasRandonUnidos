@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+
+</head>
+<body>
+    
+
+    <script>
+        const promesa = new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                reject('404 not found')
+            },3000)
+        })
+
+        promesa
+            .then(datos => {
+                console.log('Promesa Resuelta: ', datos)
+            })
+            .catch(error => {
+                console.log('Error: ',error)
+            })
+            .finally(() => {
+                console.log('Fin')
+            })
+    </script>
+</body>
+</html>
