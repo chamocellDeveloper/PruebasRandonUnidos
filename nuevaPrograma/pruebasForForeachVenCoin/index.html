@@ -10,11 +10,17 @@
     <link rel="stylesheet" href="reloj.css">
     <link rel="stylesheet" href="compras.css">
     <link rel="stylesheet" href="AnimmeBoton.css">
+    <link rel="stylesheet" href="divisa.css">
     <script src="https://kit.fontawesome.com/3226d1ef96.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
-    <div class="contenedor"></div>
+    <div class="contenedor" id="divisa">
+        <div class="divisa1"><i class="fab fa-bitcoin"></i>MXN 1,053,373.63</div>
+        <div class="divisa2"><i class="fab fa-bitcoin"></i>USD 49068.41</div>
+        <div class="divisa3"><i class="fab fa-bitcoin"></i>EU 48068.41</div>
+        
+    </div>
     <main>
         <header>
             <div class="container">
@@ -35,7 +41,7 @@
             </div>
             <form action="" id="formVenta" name="formVenta" class="form-venta">
                 <div class="formulario__grupo" id="grupo__venta">
-                    <p class="formulario__mensajeVenta-exito" id="formulario__mensajeVenta-exito">Formulario enviado exitosamente!</p>
+                    <p class="formulario__mensajeVenta-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
                     <label for="veta">Cantidad Vendo en cripto</label>
                     <input type="text" id="venta" name="venta" class="formulario__input" placeholder="0.00000000">
                     <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
@@ -74,9 +80,18 @@
                             <li id="descri5"></li>
                             <li id="descri6"></li>
                         </ul>
-                    </div>
-                    
+                    </div>   
                 </form>
+                <div class="calculadora">
+                    <div class="calculadora_impre">
+                        <p></p>
+                        <div class="content__a">
+                            <button type="submit" class="boton__doble-a2">
+                              <span><i class="fas fa-share"></i></span>
+                              Calcular</button>
+                          </div>
+                    </div>
+                </div>
 
             </div>
         </contenido1>
@@ -156,7 +171,10 @@
                                 <li id="descri13"></li>
                            
                         </ul>
-                        <hr>
+                        <hr class="hr" id="hr">
+                        <ul>
+                            <li id="descri14"></li>
+                        </ul>
                     </div>
                 </div>
                 

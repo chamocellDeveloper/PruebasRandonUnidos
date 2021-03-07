@@ -76,7 +76,7 @@ const datosValidados = () =>{
 
 const number1 = varias.venta 
 const number2 = varias.valor
-const number3 = 0.0050
+const number3 = 0.00650
 
 
 const res1 = number1 * number2 //monto que vendistes *document.querySelectorAll('#formVenta input')
@@ -85,9 +85,7 @@ const res2 = res1 * number3   // comicion de la venta en Pesos
 
 const res3 = res1 -res2      // cuanto te llego pesos
 
-    console.log(res1)
-    console.log(res2)
-    console.log(res3)
+   
     document.getElementById('descri1').innerHTML = `Vendistes:<span>${number1}</span>`
     document.getElementById('descri2').innerHTML = `Valor de Mercado: <span>${number2}</span>`
     document.getElementById('descri3').innerHTML = `Comicion del <span>0.65%</span>` 

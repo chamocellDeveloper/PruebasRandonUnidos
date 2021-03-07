@@ -9,12 +9,6 @@ contenido {
   height: 500px;
 }
 
-.contenedor {
-  width: 100%;
-  height: 40px;
-  background: rgb(206, 205, 205);
-}
-
 .container {
   margin-top: 10px;
   padding: 30px 10px;
@@ -208,3 +202,25 @@ contenido3 {
 }*/
 
 /*----------------- Contenido1 -------------*/
+
+/* mensaje de calculadora */
+
+.calculadora {
+  width: 250px;
+  height: 150px;
+
+  padding: 20px;
+  margin-left: -20px;
+  border-radius: 5px;
+}
+
+.calculadora p {
+  text-align: center;
+}
+.calculadora p span {
+  display: block;
+}
+
+.calculadora button {
+  margin-left: 87px;
+}

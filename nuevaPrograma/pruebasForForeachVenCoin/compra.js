@@ -3,7 +3,7 @@ const inputsC = document.querySelectorAll('#formCompra input')
 const compras1 = document.getElementById('compra2')
 
 const expresiones2 = {
-    presioC: /\d+\.\d{2}$/,
+    presioC: /\d+[^\,]\.\d{2}$/,
     valorC: /\d+\.\d{2}$/,
     deceo: /\d+\.\d{2}$/
 }
@@ -16,8 +16,9 @@ const campoC = {
 
 const compra = []
 const valorRest = []
+const Relacionado = 12047
 
-const porsentaje = 0.0050
+const porsentaje = 0.0065
 
 const validarFormularioCompra = (e) => {
     //console.log(e.target.value)
@@ -58,6 +59,7 @@ const validarCompra = (expresiones2,input,campo) => {
       }
 }
 
+
 inputsC.forEach((input) => {
     input.addEventListener('keyup', validarFormularioCompra)
     input.addEventListener('blur', validarFormularioCompra)
@@ -65,11 +67,11 @@ inputsC.forEach((input) => {
 
 formCompra.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log('click')
-    
+        
     if(campoC.presioC && campoC.valorC ){
         formCompra.reset()
         CompraValida()
+        Disas()
         document.getElementById('formulario__mensajeCompra-exito').classList.add('formulario__mensajeCompra-exito-activo')
 
         setTimeout(() => {
@@ -84,6 +86,13 @@ formCompra.addEventListener('submit', (e) => {
     }
 })
 
+const Disas = () => {
+    if(campoC.presioC == true){
+
+        document.getElementById('divisa').classList.add('contenedor-active')
+        document.getElementById('hr').classList.add('hr-active')
+    }
+}
 
 const CompraValida = () => {
 
@@ -91,16 +100,28 @@ const CompraValida = () => {
     const number4 = compra.presioC     //compra de cripto precio en fias
     const number5 = compra.valorC   //precio del mercado al comprar
     const number6 = 0.0050
+
+    //Variable de convercion de estring a number
+    convertidor = parseInt(number5)
+    convertidorTwo = parseInt(number4)
+    console.log(convertidorTwo)
     
     const res4 = number4 / number5 // monto comprado/posentage
     const res5 = res4 * number6  //comicsion
     const res6 = res4 - res5     // cuanto te dan
     const res7 = res5 * number5
+    const res15 = convertidor + Relacionado
 
-    valorRest ["res4"] = res4
+    
+
+    valorRest ["res4"]    = res4
     valorRest ["number4"] = number4
+    valorRest ["total"]   = res6
+   
 
-    console.log(res6)
+    
+
+    //console.log(res6)
     //fin de esta operacion pero se puede unir con la sigiente directamente al poner el monto 
 
     const DatosCompra1 = [
@@ -111,9 +132,10 @@ const CompraValida = () => {
      {cobroComi   : res5   },
      {total       : res6   },
      {comicionP   : res7   },
+     {minVenta    : res15  },
     ]
     
-    console.log(DatosCompra1)
+   
 
     /*DatosCompra1.forEach(item => {
       const li = document.createElement('li')
@@ -123,63 +145,79 @@ const CompraValida = () => {
 
     document.getElementById('descri7').innerHTML = `Cantidad Comprada ${DatosCompra1[0].precioCompra}</span>`
     document.getElementById('descri8').innerHTML = `Valor de Mercado: <span>${DatosCompra1[1].mercado}</span>`
-    document.getElementById('descri9').innerHTML = `Comicion del <span>0.65%</span>` 
+    document.getElementById('descri9').innerHTML = `Comicion del <span>0.50%</span>` 
     document.getElementById('descri10').innerHTML = `Total de la Comprado: <span>${DatosCompra1[3].compraste.toFixed(8)}</span>`
     document.getElementById('descri11').innerHTML = `Total de la comicion: <span>${DatosCompra1[4].cobroComi.toFixed(8)}</span>`
     document.getElementById('descri12').innerHTML = `Total de la comicion: <span>${DatosCompra1[6].comicionP.toFixed(2)}</span>`  
     document.getElementById('descri13').innerHTML = `Total a recibir <span>${DatosCompra1[5].total.toFixed(8)}</span>`
+    document.getElementById('descri14').innerHTML = `Valor Minimo de venta <span>${DatosCompra1[7].minVenta.toFixed(2)}</span>`
     
-
+    validacion2()
 }
 
- // operacion de ganacia 
- const number7 = 951853.00 // este monto en pesos es al que quieres vender 
- const number8 = porsentaje
- const number9 = valorRest.res4  //monto que yo deveria tener
- 
- const number10 =  number9 - number8 //diferencia entre compara y lo que dan
- const number11 =  number10 + number8 // monto para estar en el monto que tenia que tener
-
-// si yo vendo
-
-const venta = number11
-
-const porcetaje = 0.018
-const valorPorce = number7 * porcetaje
-const valor2 = number7 + valorPorce  // monto de venta
-
-const valor3 = number11 * valor2  //monto de recuperacion
-
-/* -----------------------------------------------------*/
 
 
-// operacion cuando compras BTC con pesos 
-const number12 = valor3
-const number13 = valor2
-const number14 = 0.0065
+    const validacion2 = () => {
 
-const res12 = number12 / number13 // monto comprado/porsentage
-const res13 = res12 * number14  //comicsion
-const res14 = res12 - res13     // cuanto te dan
+        
 
-
-/* ------------------------------------------------------------*/
-
-const ganacia1 = res14  // monto de recuperacion
-const comicion = 0.0065
-
-const resulganacia = ganacia1 * comicion  //retamos la comicion
-const ganacia2 = ganacia1 + resulganacia  //incrementamos la comision
-
-const ganacia3 = valor2 * comicion  //incremento para optener ganacia
-
-const ganacia4 = valor2 + ganacia3 //este es el precio para la veta con ganacia
+        // operacion de ganacia 
+        const number7 =valorRest.total // Este es la cantidad real que yo puedo vender  
+        const number8 = porsentaje
+        const number9 = valorRest.res4  // Aqui colocamos el monto que compramos pero le descontaron la comicion
+        
+        const number10 =  number9 - number8 //diferencia entre compara y lo que dan
+        const number11 =  number10 + number8 // monto para estar en el monto que tenia que tener
+        
+        
+        // si yo vendo
 
 
-/* -----------------------------------------------------------*/
+        
+        const venta = number11
+        console.log(number11)
+        
+        const porcetaje = 0.0065
+        const valorPorce = number7 * porcetaje
+        const valor2 = number7 + valorPorce  // monto de venta
+        
+        const valor3 = number11 * valor2  //monto de recuperacion
+        
+        /* -----------------------------------------------------*/
+       
+        
+        // operacion cuando compras BTC con pesos 
+        const number12 = valor3
+        const number13 = valor2
+        const number14 = 0.0065
+        
+        const res12 = number12 / number13 // monto comprado/porsentage
+        const res13 = res12 * number14  //comicsion
+        const res14 = res12 - res13     // cuanto te dan
+        
+        
+        /* ------------------------------------------------------------*/
+        
+        const ganacia1 = res14  // monto de recuperacion
+        const comicion = 0.0065
+        
+        const resulganacia = ganacia1 * comicion  //retamos la comicion
+        const ganacia2 = ganacia1 + resulganacia  //incrementamos la comision
+        
+        const ganacia3 = valor2 * comicion  //incremento para optener ganacia
+        
+        const ganacia4 = valor2 + ganacia3 //este es el precio para la veta con ganacia
+        
+        
+        /* -----------------------------------------------------------*/
+        
+        //cuanto me gane
+        
+        const ganacia5 = ganacia1 * ganacia4 
+        
+        const ganaciatotal = ganacia5 - valorRest.number4
+        //console.log(ganaciatotal)
+    }
 
-//cuanto me gane
 
-const ganacia5 = ganacia1 * ganacia4 
 
-const ganaciatotal = ganacia5 - valorRest.number4

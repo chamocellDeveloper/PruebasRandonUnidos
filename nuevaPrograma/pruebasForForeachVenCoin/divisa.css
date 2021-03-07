@@ -1,0 +1,43 @@
+.contenedor {
+  width: 150%;
+  height: 40px;
+  background: rgb(206, 205, 205);
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+
+.contenedor > div {
+  background: #f600004e;
+  width: 180px;
+  height: 30px;
+  margin: 5px;
+  line-height: 29px;
+  border-radius: 5px;
+}
+
+.divisa1 {
+  text-align: center;
+}
+.divisa2 {
+  text-align: center;
+}
+.divisa3 {
+  text-align: center;
+}
+
+.contenedor > div .fa-bitcoin {
+  margin: 5px;
+  color: brown;
+}
+
+.contenedor-active {
+  opacity: 1;
+}
+
+.hr {
+  display: none;
+}
+.hr-active {
+  display: block;
+}
