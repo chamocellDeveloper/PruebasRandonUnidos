@@ -10,8 +10,9 @@ main {
 }
 
 contenido {
-  width: 172px;
+  width: 200px;
   height: 500px;
+  margin-left: 5px;
 }
 
 .container {
