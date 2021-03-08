@@ -5,13 +5,18 @@
 }
 
 main {
+<<<<<<< HEAD
   width: 1000%;
+=======
+  width: 100%;
+>>>>>>> c0dce88b2593e1ef2eb6c77328cd2b2111e08e41
   max-width: 1200px;
 }
 
 contenido {
-  width: 172px;
+  width: 200px;
   height: 500px;
+  margin-left: 5px;
 }
 
 .container {
