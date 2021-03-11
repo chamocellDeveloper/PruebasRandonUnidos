@@ -55,6 +55,7 @@ formVenta.addEventListener('submit', (e) => {
     if(campos.venta && campos.valor){
         formVenta.reset()
         datosValidados()
+        
 
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensajeVenta-exito-activo')
 
@@ -92,5 +93,10 @@ const res3 = res1 -res2      // cuanto te llego pesos
     document.getElementById('descri4').innerHTML = `Total de la venta: <span>${res1.toFixed(2)}</span>`
     document.getElementById('descri5').innerHTML = `Total de la comicion: <span>${res2.toFixed(2)}</span>`
     document.getElementById('descri6').innerHTML = `Total a recibir <span>${res3.toFixed(2)}</span>`
+
+    campos['venta']= false
+    campos['valor']= false
     
 }
+
+

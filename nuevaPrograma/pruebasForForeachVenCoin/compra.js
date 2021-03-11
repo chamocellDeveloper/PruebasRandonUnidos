@@ -56,6 +56,11 @@ const validarCompra = (expresiones2,input,campo) => {
           document.getElementById(`group__${campo}`).classList.remove('form__group-compra-activo')
           document.querySelector(`#group__${campo} .compra__group-error`).classList.add('compra__group-error-active')
           campoC [campo] = false
+          setTimeout(() => {
+            document.querySelector(`#group__${campo} .compra__group-error`).classList.remove('compra__group-error-active')
+            document.getElementById(`group__${campo}`).classList.remove('formulario__grupo-incorrecto')
+            formCompra.reset()
+          }, 50000);
       }
 }
 
@@ -82,6 +87,7 @@ formCompra.addEventListener('submit', (e) => {
 
         setTimeout(() => {
             document.getElementById('formulario__mensajeCompra').classList.remove('formulario__mensajeCompra-activo')
+            formCompra.reset()
         },5000)
     }
 })
@@ -217,6 +223,10 @@ const CompraValida = () => {
         
         const ganaciatotal = ganacia5 - valorRest.number4
         //console.log(ganaciatotal)
+
+        campoC ['presioC'] = false
+        campoC ['valorC'] = false
+        campoC ['deceo'] = false
     }
 
 
