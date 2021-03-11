@@ -5,6 +5,7 @@ const editBtn    = document.querySelector('.edit')
 const respuest   = document.getElementById('respuesta')
 const textarea   = document.querySelector('.textarea')
 const textareaid = document.querySelector('.textareaid')
+const InfoText   = document.getElementById('respuesta textareaid')
 
 
 /*btn.onclick = () => {
@@ -21,5 +22,11 @@ const textareaid = document.querySelector('.textareaid')
 btn.addEventListener('click', () => {
     widget.style.display = 'none'
     post.style.display = 'block'
-
+    DataText()
+    respuest.reset()
 })
+
+const DataText = () => {
+
+    console.log(respuesta[0].value)
+}
