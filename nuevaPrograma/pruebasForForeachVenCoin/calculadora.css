@@ -1,0 +1,44 @@
+.conten__calculadora {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  padding-top: 30px;
+}
+
+.conten__calculadora form {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+.conten__calculadora-label {
+  margin: 21px;
+}
+
+.conten__calculadora-label2 {
+  margin: 21px;
+}
+
+.conten__calculadora-input1 {
+  margin: 15px 0 0 10px;
+}
+/* mensajes de error */
+
+.message__error {
+  color: red;
+  padding: 10px;
+  display: none;
+}
+
+.message__error2 {
+  color: red;
+  padding: 10px;
+  display: none;
+}
+
+.message__error-active {
+  display: block;
+}
+
+.message__error2-active {
+  display: block;
+}

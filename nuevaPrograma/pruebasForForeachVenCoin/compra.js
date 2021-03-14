@@ -16,7 +16,7 @@ const campoC = {
 
 const compra = []
 const valorRest = []
-const Relacionado = 12047
+const Relacionado = 13800
 
 const porsentaje = 0.0065
 

@@ -1,181 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pruebas de for y foreach</title>
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="app1.css">
-    <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="reloj.css">
-    <link rel="stylesheet" href="compras.css">
-    <link rel="stylesheet" href="AnimmeBoton.css">
-    <link rel="stylesheet" href="divisa.css">
-    <script src="https://kit.fontawesome.com/3226d1ef96.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="app1.css" />
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="reloj.css" />
+    <link rel="stylesheet" href="compras.css" />
+    <link rel="stylesheet" href="AnimmeBoton.css" />
+    <link rel="stylesheet" href="divisa.css" />
+    <link rel="stylesheet" href="calculadora.css" />
+
+    <script
+      src="https://kit.fontawesome.com/3226d1ef96.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="contenedor" id="divisa">
-        <div class="divisa1"><i class="fab fa-bitcoin"></i>MXN 1,053,373.63</div>
-        <div class="divisa2"><i class="fab fa-bitcoin"></i>USD 49068.41</div>
-        <div class="divisa3"><i class="fab fa-bitcoin"></i>EU 48068.41</div>
-        
+      <div class="divisa1"><i class="fab fa-bitcoin"></i>MXN 1,053,373.63</div>
+      <div class="divisa2"><i class="fab fa-bitcoin"></i>USD 49068.41</div>
+      <div class="divisa3"><i class="fab fa-bitcoin"></i>EU 48068.41</div>
     </div>
     <main>
-        <header>
-            <div class="container">
-                <div class="reloj">
-                    <h2 id="hour">00</h2>
-                    <h2 id="dot">:</h2>
-                    <h2 id="minute">00</h2>
-                    <h2 id="dot">:</h2>
-                    <h2 id="seconds">00</h2>
-                    <span id="ampm">AM</span>
-                </div>
-                <h1 class="pueba__groud-title">Encabezado</h1>
+      <header>
+        <div class="container">
+          <div class="reloj">
+            <h2 id="hour">00</h2>
+            <h2 id="dot">:</h2>
+            <h2 id="minute">00</h2>
+            <h2 id="dot">:</h2>
+            <h2 id="seconds">00</h2>
+            <span id="ampm">AM</span>
+          </div>
+          <h3 class="pueba__groud-title">
+            Precio maximo 1,282,599.87 MXN minimo 1,176,648.53 MXN
+          </h3>
+        </div>
+      </header>
+      <contenido>
+        <div class="cont__group-title">
+          <h3>Venta Cripto</h3>
+        </div>
+        <form action="" id="formVenta" name="formVenta" class="form-venta">
+          <div class="formulario__grupo" id="grupo__venta">
+            <p
+              class="formulario__mensajeVenta-exito"
+              id="formulario__mensaje-exito"
+            >
+              Formulario enviado exitosamente!
+            </p>
+            <label for="veta">Cantidad Vendo en cripto</label>
+            <input
+              type="text"
+              id="venta"
+              name="venta"
+              class="formulario__input"
+              placeholder="0.00000000"
+            />
+            <p id="veta__group-error" class="veta__group-error">
+              Ingrese un valor Basico
+            </p>
+          </div>
+
+          <div class="formulario__grupo" id="grupo__valor">
+            <label for="veta">Precio de la venta</label>
+            <input
+              type="text"
+              id="valor"
+              name="valor"
+              class="formulario__input"
+              placeholder="123.00"
+            />
+            <p id="veta__group-error" class="veta__group-error">
+              Ingrese un valor Basico
+            </p>
+          </div>
+
+          <div class="formulario__mensajeVenta" id="formulario__mensaje">
+            <p>
+              <i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Rellena
+              el formulario.
+            </p>
+          </div>
+
+          <div class="content__a1 buton_group-enviar">
+            <button type="submit" class="boton__doble-a2">
+              <span><i class="fas fa-share"></i></span>
+              Enviar
+            </button>
+          </div>
+        </form>
+      </contenido>
+      <contenido1>
+        <div class="caja1">
+          <h3 class="group__contenido1-title">Descrpcion</h3>
+          <form action="" id="formulario__data" class="formulario__data">
+            <div class="row">
+              <ul>
+                <li id="descri1"></li>
+                <li id="descri2"></li>
+                <li id="descri3"></li>
+                <li id="descri4"></li>
+                <li id="descri5"></li>
+                <li id="descri6"></li>
+              </ul>
             </div>
-        </header>
-        <contenido>
-            <div class="cont__group-title">
-                <h3>Venta Cripto</h3>
+          </form>
+        </div>
+      </contenido1>
+      <contenido2>
+        <div class="contenedor__grupo1">
+          <div class="contenedor__grupo1-caja1">
+            <div class="contenedor__grupo1-caja2">
+              <h2>Compra de Cripto</h2>
             </div>
-            <form action="" id="formVenta" name="formVenta" class="form-venta">
-                <div class="formulario__grupo" id="grupo__venta">
-                    <p class="formulario__mensajeVenta-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-                    <label for="veta">Cantidad Vendo en cripto</label>
-                    <input type="text" id="venta" name="venta" class="formulario__input" placeholder="0.00000000">
-                    <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
-                </div>
-
-                <div class="formulario__grupo" id="grupo__valor">
-                    <label for="veta">Precio de la venta</label>
-                    <input type="text" id="valor" name="valor" class="formulario__input" placeholder="123.00">
-                    <p id="veta__group-error" class="veta__group-error">Ingrese un valor Basico</p>
-                </div>
-
-                <div class="formulario__mensajeVenta" id="formulario__mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Rellena el formulario. </p>
-                </div>
-
-                <div class="content__a1 buton_group-enviar">
-                    <button type="submit" class="boton__doble-a2">
-                        <span><i class="fas fa-share"></i></span>
-                        Enviar
-                    </button>
-                
-                </div>     
-            </form>
-            
-        </contenido>
-        <contenido1>
-            <div class="caja1">
-                <h3 class="group__contenido1-title">Descrpcion</h3>
-                <form action="" id="formulario__data" class="formulario__data">
-                    <div class="row">
-                        <ul>
-                            <li id="descri1"></li>
-                            <li id="descri2"></li>
-                            <li id="descri3"></li>
-                            <li id="descri4"></li>
-                            <li id="descri5"></li>
-                            <li id="descri6"></li>
-                        </ul>
-                    </div>   
-                </form>
-
-            </div>
-        </contenido1>
-        <contenido2>
-            <div class="contenedor__grupo1">
-                <div class="contenedor__grupo1-caja1">
-                    <div class="contenedor__grupo1-caja2">
-                        <h2>Compra de Cripto</h2>
+            <div class="contenedor__grupo1-caja3">
+              <div class="contenedor__grupo1-caja3-1">
+                <img src="img/img1.jpg" alt="" class="imagen" />
+              </div>
+              <label for="" class="form__group-title" id="form__group-title">
+                Compra de Cripto
+              </label>
+              <div class="compra__contenedor">
+                <form action="" class="form__group-compra" id="formCompra">
+                  <div class="form__group-datos" id="group__presioC">
+                    <p
+                      class="formulario__mensajeCompra-exito"
+                      id="formulario__mensajeCompra-exito"
+                    >
+                      Formulario enviado exitosamente!
+                    </p>
+                    <label for="compras" class="formulario__label"
+                      >Cantidad en fiat</label
+                    >
+                    <div class="form_group-imput">
+                      <input
+                        type="text"
+                        class="formulario__input"
+                        name="presioC"
+                        id="presioC"
+                      />
+                      <p class="compra__group-error">Ingrese un valor Basico</p>
                     </div>
-                    <div class="contenedor__grupo1-caja3">
-                        <div class="contenedor__grupo1-caja3-1">
-                            <img src="img/img1.jpg" alt="" class="imagen">
-                        </div>
-                            <label for="" class="form__group-title" id="form__group-title">
-                                Compra de Cripto
-                            </label>
-                            <div class="compra__contenedor">
-                                <form action="" class="form__group-compra" id="formCompra">
+                  </div>
+                  <div class="form__group-datos" id="group__valorC">
+                    <label for="compras" class="formulario__label"
+                      >Precio del mercado</label
+                    >
+                    <div class="form_group-imput">
+                      <input
+                        type="text"
+                        class="formulario__input"
+                        name="valorC"
+                        id="valorC"
+                      />
+                      <p class="compra__group-error">Ingrese un valor Basico</p>
+                    </div>
+                  </div>
 
-                                    <div class="form__group-datos" id="group__presioC">
-                                        <p class="formulario__mensajeCompra-exito" id="formulario__mensajeCompra-exito">Formulario enviado exitosamente!</p>
-                                        <label for="compras" class="formulario__label">Cantidad en fiat</label>
-                                        <div class="form_group-imput">
-                                            <input type="text" class="formulario__input" name="presioC" id="presioC" >
-                                            <p class="compra__group-error">Ingrese un valor Basico</p>
-                                        </div>
-                                    </div>
-                                    <div class="form__group-datos" id="group__valorC">
-                                        <label for="compras" class="formulario__label">Precio del mercado</label>
-                                        <div class="form_group-imput">
-                                            <input type="text" class="formulario__input" name="valorC" id="valorC" >
-                                            <p class="compra__group-error">Ingrese un valor Basico</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- <div class="form__group-datos" id="group__deceo">
+                  <!-- <div class="form__group-datos" id="group__deceo">
                                         <label for="compras" class="formulario__label">Quiero vender a :</label>
                                         <div class="form_group-imput">
                                             <input type="text" class="formulario__input" name="deceo" id="deceo" >
                                             <p class="compra__group-error">Ingrese un valor Basico</p>
                                         </div>
                                     </div>-->
-            
 
-                                    <div class="formulario__mensajeCompra" id="formulario__mensajeCompra">
-                                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Rellena el formulario. </p>
-                                    </div>
-                                    
-                                    <div class="content__a">
-                                        <button type="submit" class="boton__doble-a2">
-                                          <span><i class="fas fa-share"></i></span>
-                                          Enviar</button>
-                                      </div>
-                            </form>
+                  <div
+                    class="formulario__mensajeCompra"
+                    id="formulario__mensajeCompra"
+                  >
+                    <p>
+                      <i class="fas fa-exclamation-triangle"></i>
+                      <b>Error:</b>Rellena el formulario.
+                    </p>
+                  </div>
 
-                            </div>
-                    </div>
-                </div>
+                  <div class="content__a">
+                    <button type="submit" class="boton__doble-a2">
+                      <span><i class="fas fa-share"></i></span>
+                      Enviar
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            
-        </contenido2>
-        <contenido3>
-            <section>
-
-                <div class="title">
-                    <h3>Resultado de compra</h3>
+            <div class="conten__calculadora">
+              <form action="" id="calculadora">
+                <div class="calculador" id="grupo__calculadora">
+                  <label for="calculadora" class="conten__calculadora-label"
+                    >Total recivido</label
+                  >
+                  <input
+                    type="text"
+                    class="conten__calculadora-input1"
+                    name="valor1"
+                    id="valor1"
+                  />
+                  <p class="message__error">Ejemplo 123.00</p>
                 </div>
-                <div class="contenidoCompra">
-                    <div class="conteiner__Compra">
-                        <ul id="compra2">    
-                                <li id="descri7"></li>
-                                <li id="descri8"></li>
-                                <li id="descri9"></li>
-                                <li id="descri10"></li>
-                                <li id="descri11"></li>
-                                <li id="descri12"></li>
-                                <li id="descri13"></li>
-                           
-                        </ul>
-                        <hr class="hr" id="hr">
-                        <ul>
-                            <li id="descri14"></li>
-                        </ul>
-                    </div>
+                <div class="calculador2" id="grupo__calculadora2">
+                  <label for="calculadora" class="conten__calculadora-label2"
+                    >Cantidad comprada</label
+                  >
+                  <input
+                    type="text"
+                    class="conten__calculadora-input1"
+                    name="valor2"
+                    id="valor2"
+                  />
+                  <p class="message__error2">Ejemplo 123.00</p>
                 </div>
-                
 
-            </section>
-        </contenido3>
+                <div id="resultado" class="resultado"></div>
+
+                <div class="content__a">
+                  <button type="submit" class="boton__doble-a2">
+                    <span><i class="fas fa-share"></i></span>
+                    Calcular
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </contenido2>
+      <contenido3>
+        <section>
+          <div class="title">
+            <h3>Resultado de compra</h3>
+          </div>
+          <div class="contenidoCompra">
+            <div class="conteiner__Compra">
+              <ul id="compra2">
+                <li id="descri7"></li>
+                <li id="descri8"></li>
+                <li id="descri9"></li>
+                <li id="descri10"></li>
+                <li id="descri11"></li>
+                <li id="descri12"></li>
+                <li id="descri13"></li>
+              </ul>
+              <hr class="hr" id="hr" />
+              <ul>
+                <li id="descri14"></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </contenido3>
     </main>
-    
-    
+
     <script src="app.js"></script>
     <script src="reloj.js"></script>
     <script src="compra.js"></script>
-</body>
+    <script src="calculadora.js"></script>
+  </body>
 </html>
