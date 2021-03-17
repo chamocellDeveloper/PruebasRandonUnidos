@@ -1,0 +1,23 @@
+.dotted {
+    border-style: dotted;
+    padding: 10px;
+}
+
+.dashed {
+    border-style: dashed;
+    padding: 10px;
+}
+
+.solid {
+    border-style: solid;
+    padding: 10px;
+}
+
+.double {
+    border-style: double;
+    padding: 10px;
+}
+
+.todos {
+    border-style: double solid dashed dotted;
+}
